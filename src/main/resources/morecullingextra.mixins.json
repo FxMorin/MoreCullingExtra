@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ca.fxco.morecullingextra.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "AbstractGlassBlock_beaconMixin",
+    "BeaconBlock_glassMixin",
+    "PaneBlock_glassMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

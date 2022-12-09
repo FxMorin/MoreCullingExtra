@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "morecullingextra",
+  "version": "${version}",
+  "name": "More Culling Extra",
+  "description": "A MoreCulling extension mod with smaller changes I don't want to put into MoreCulling. MoreCulling API example mod",
+  "authors": [
+    "FX - PR0CESS"
+  ],
+  "contact": {
+    "homepage": "https://github.com/fxmorin/MoreCullingExtra",
+    "sources": "https://github.com/fxmorin/MoreCullingExtra",
+    "issues": "https://github.com/fxmorin/MoreCullingExtra/issues",
+    "repo": "https://github.com/fxmorin/MoreCullingExtra"
+  },
+  "icon": "assets/morecullingextra/MoreCullingExtra.png",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ca.fxco.morecullingextra.MoreCullingExtra"
+    ]
+  },
+  "mixins": [
+    "morecullingextra.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "minecraft": ">=1.19.3",
+    "moreculling": ">=0.11.0"
+  },
+  "recommends": {
+    "carpet-fixes": "*",
+    "memoryleakfix": "*"
+  },
+  "suggests": {
+    "memoryleakfix": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/SGFDrvA"
+      }
+    }
+  }
+}
