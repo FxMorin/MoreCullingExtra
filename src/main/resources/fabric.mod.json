@@ -37,6 +37,11 @@
     "memoryleakfix": "*"
   },
   "custom": {
+    "mc-publish": {
+      "curseforge": 729197,
+      "modrinth": "dFKMFBrn",
+      "quilt": true
+    },
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/SGFDrvA"
