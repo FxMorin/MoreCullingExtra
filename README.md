@@ -1,5 +1,5 @@
 # MoreCullingExtra
-A mod that adds small aditions to [MoreCulling](https://github.com/fxmorin/MoreCulling) using its API.
+A mod that adds small additions to [MoreCulling](https://github.com/fxmorin/MoreCulling) using its API.
 
 **Current Features:**
 - Glass Panes cull against glass & beacons
