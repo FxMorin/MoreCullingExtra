@@ -1,6 +1,7 @@
 package ca.fxco.morecullingextra.mixin;
 
 import ca.fxco.moreculling.api.block.MoreBlockCulling;
+import ca.fxco.morecullingextra.MoreCullingExtra;
 import net.minecraft.block.AbstractGlassBlock;
 import net.minecraft.block.BeaconBlock;
 import net.minecraft.block.BlockState;
@@ -16,7 +17,7 @@ public class AbstractGlassBlock_beaconMixin implements MoreBlockCulling {
 
     @Override
     public boolean usesCustomShouldDrawFace(BlockState state) {
-        return true;
+        return MoreCullingExtra.CONFIG.beaconCulling;
     }
 
     @Override

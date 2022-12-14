@@ -27,7 +27,7 @@
   "depends": {
     "fabricloader": ">=0.14.11",
     "minecraft": ">=1.19.3",
-    "moreculling": ">=0.11.0"
+    "moreculling": ">=0.12.0"
   },
   "recommends": {
     "carpet-fixes": "*",

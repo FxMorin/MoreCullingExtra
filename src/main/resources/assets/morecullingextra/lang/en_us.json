@@ -1,0 +1,8 @@
+{
+  "modmenu.descriptionTranslation.moreculling": "",
+  "morecullingextra.title": "MoreCullingExtra",
+  "morecullingextra.config.option.beaconCulling": "Beacon Culling",
+  "morecullingextra.config.option.beaconCulling.tooltip": "Culls the beacon glass against normal glass",
+  "morecullingextra.config.option.paneCulling": "Glass Pane Culling",
+  "morecullingextra.config.option.paneCulling.tooltip": "Culls glass panes against glass blocks and beacons"
+}
