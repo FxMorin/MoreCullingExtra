@@ -1,0 +1,8 @@
+{
+  "modmenu.descriptionTranslation.moreculling": "",
+  "morecullingextra.title": "MoreCullingExtra",
+  "morecullingextra.config.option.beaconCulling": "烽火台剃除",
+  "morecullingextra.config.option.beaconCulling.tooltip": "將烽火台玻璃與普通玻璃進行剃除",
+  "morecullingextra.config.option.paneCulling": "玻璃片剃除",
+  "morecullingextra.config.option.paneCulling.tooltip": "對玻璃以及烽火台與玻璃片進行剃除"
+}
