@@ -2,7 +2,7 @@
   "modmenu.descriptionTranslation.moreculling": "",
   "morecullingextra.title": "MoreCullingExtra",
   "morecullingextra.config.option.beaconCulling": "信标剔除",
-  "morecullingextra.config.option.beaconCulling.tooltip": "将信标玻璃与普通玻璃进行剔除",
+  "morecullingextra.config.option.beaconCulling.tooltip": "信标玻璃对普通玻璃的剔除",
   "morecullingextra.config.option.paneCulling": "玻璃板剔除",
-  "morecullingextra.config.option.paneCulling.tooltip": "对玻璃和信标的玻璃板进行剔除"
+  "morecullingextra.config.option.paneCulling.tooltip": "玻璃板对玻璃和信标玻璃的剔除"
 }
