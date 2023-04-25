@@ -1,0 +1,8 @@
+{
+  "modmenu.descriptionTranslation.moreculling": "",
+  "morecullingextra.title": "MoreCullingExtra",
+  "morecullingextra.config.option.beaconCulling": "Culling dei fari",
+  "morecullingextra.config.option.beaconCulling.tooltip": "Culling del vetro dei fari contro del vetro normale",
+  "morecullingextra.config.option.paneCulling": "Culling dei pannelli di vetro",
+  "morecullingextra.config.option.paneCulling.tooltip": "Culling dei pannelli divetro a contatto col vetro o con un faro"
+}
