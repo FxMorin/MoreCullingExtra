@@ -2,9 +2,9 @@ package ca.fxco.morecullingextra.mixin;
 
 import ca.fxco.moreculling.api.block.MoreBlockCulling;
 import ca.fxco.morecullingextra.MoreCullingExtra;
-import net.minecraft.block.AbstractGlassBlock;
 import net.minecraft.block.BeaconBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.TranslucentBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.Optional;
 
-@Mixin(AbstractGlassBlock.class)
-public class AbstractGlassBlock_beaconMixin implements MoreBlockCulling {
+@Mixin(TranslucentBlock.class)
+public class TranslucentBlock_beaconMixin implements MoreBlockCulling {
 
     @Override
     public boolean usesCustomShouldDrawFace(BlockState state) {
