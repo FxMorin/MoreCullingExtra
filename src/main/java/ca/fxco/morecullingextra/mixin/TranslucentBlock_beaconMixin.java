@@ -22,8 +22,4 @@ public class TranslucentBlock_beaconMixin implements MoreBlockCulling {
             BlockState sideState, BlockPos thisPos, BlockPos sidePos, Direction side) {
         return sideState.getBlock() instanceof BeaconBlock ? Optional.of(false) : Optional.empty();
     }
-
-    public boolean moreculling$shouldAttemptToCull(BlockState state, Direction side, BlockView level, BlockPos pos) {
-        return MoreCullingExtra.CONFIG.beaconCulling;
-    }
 }

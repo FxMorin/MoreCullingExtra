@@ -51,7 +51,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Add MoreCulling API
-    modApi ("maven.modrinth:moreculling:1.2.3") 
+    modApi ("maven.modrinth:moreculling:${project.moreculling_version}-fabric") 
 }
 
 

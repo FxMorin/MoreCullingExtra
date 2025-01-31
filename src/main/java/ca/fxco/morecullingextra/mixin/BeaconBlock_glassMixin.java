@@ -25,8 +25,4 @@ public class BeaconBlock_glassMixin implements MoreBlockCulling {
         }
         return Optional.empty();
     }
-
-    public boolean moreculling$shouldAttemptToCull(BlockState state, Direction side, BlockView level, BlockPos pos) {
-        return MoreCullingExtra.CONFIG.beaconCulling;
-    }
 }
