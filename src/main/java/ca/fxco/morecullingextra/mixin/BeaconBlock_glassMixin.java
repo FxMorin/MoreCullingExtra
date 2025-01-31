@@ -9,23 +9,24 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import org.spongepowered.asm.mixin.Mixin;
-
 import java.util.Optional;
 
 @Mixin(BeaconBlock.class)
 public class BeaconBlock_glassMixin implements MoreBlockCulling {
 
-    @Override
-    public boolean usesCustomShouldDrawFace(BlockState state) {
+    public boolean moreculling$usesCustomShouldDrawFace(BlockState state) {
         return MoreCullingExtra.CONFIG.beaconCulling;
     }
 
-    @Override
-    public Optional<Boolean> customShouldDrawFace(BlockView view, BlockState thisState, BlockState sideState,
-                                                  BlockPos thisPos, BlockPos sidePos, Direction side) {
-        if (sideState.getBlock() instanceof TranslucentBlock || sideState.getBlock() instanceof BeaconBlock) {
+    public Optional<Boolean> moreculling$customShouldDrawFace(BlockView view, BlockState thisState,
+            BlockState sideState, BlockPos thisPos, BlockPos sidePos, Direction side) {
+        if (sideState.getBlock() instanceof TranslucentBlock) {
             return Optional.of(false);
         }
         return Optional.empty();
+    }
+
+    public boolean moreculling$shouldAttemptToCull(BlockState state, Direction side, BlockView level, BlockPos pos) {
+        return MoreCullingExtra.CONFIG.beaconCulling;
     }
 }
