@@ -20,7 +20,7 @@ public class BeaconBlock_glassMixin implements MoreBlockCulling {
 
     public Optional<Boolean> moreculling$customShouldDrawFace(BlockView view, BlockState thisState,
             BlockState sideState, BlockPos thisPos, BlockPos sidePos, Direction side) {
-        if (sideState.getBlock() instanceof TranslucentBlock) {
+        if (sideState.getBlock() instanceof TranslucentBlock || sideState.getBlock() instanceof BeaconBlock) {
             return Optional.of(false);
         }
         return Optional.empty();
