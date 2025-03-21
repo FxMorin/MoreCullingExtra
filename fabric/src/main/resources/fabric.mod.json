@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "morecullingextra",
-  "version": "${version}",
+  "version": "${mod_version}",
   "name": "More Culling Extra",
   "description": "A MoreCulling extension mod with smaller changes I don't want to put into MoreCulling. MoreCulling API example mod",
   "authors": [
@@ -18,7 +18,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "ca.fxco.morecullingextra.MoreCullingExtra"
+      "ca.fxco.morecullingextra.MoreCullingExtraFabric"
     ]
   },
   "mixins": [

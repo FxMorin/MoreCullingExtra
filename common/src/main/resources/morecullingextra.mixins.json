@@ -5,9 +5,9 @@
   "package": "ca.fxco.morecullingextra.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "TranslucentBlock_beaconMixin",
+    "HalfTransparentBlock_beaconMixin",
     "BeaconBlock_glassMixin",
-    "PaneBlock_glassMixin"
+    "IronBarsBlock_glassMixin"
   ],
   "injectors": {
     "defaultRequire": 1

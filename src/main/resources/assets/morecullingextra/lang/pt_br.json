@@ -1,8 +1,0 @@
-{
-    "modmenu.descriptionTranslation.moreculling": "",
-    "morecullingextra.title": "MoreCullingExtra",
-    "morecullingextra.config.option.beaconCulling": "Abate de Sinalizadores",
-    "morecullingextra.config.option.beaconCulling.tooltip": "Abate o vidro da baliza contra o vidro normal",
-    "morecullingextra.config.option.paneCulling": "Abate de painel de vidro",
-    "morecullingextra.config.option.paneCulling.tooltip": "Abate painéis de vidro contra blocos de vidro e sinalizadores"
-  }
