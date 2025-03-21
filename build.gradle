@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.9-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -8,9 +8,17 @@ group = project.maven_group
 
 repositories {
     allprojects {
-        repositories {
-            maven { url 'https://jitpack.io' }
+        exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
         }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
     }
     maven { //AutoConfig
         name = "Shedaniel's Maven"
@@ -35,53 +43,43 @@ repositories {
     }
 }
 
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.minecraft_version}+build.${project.yarn_mappings}:v2"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Add MoreCulling API
-    modApi "com.github.fxmorin:MoreCulling:v${project.moreculling_version}"
+    modApi ("maven.modrinth:moreculling:${project.moreculling_version}-fabric") 
 }
+
 
 processResources {
-    inputs.property "version", project.version
-    filteringCharset "UTF-8"
+	inputs.property "version", project.version
 
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
 }
 
-def targetJavaVersion = 17
 tasks.withType(JavaCompile).configureEach {
-    // ensure that the encoding is set to UTF-8, no matter what the system default is
-    // this fixes some edge cases with special characters not displaying correctly
-    // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-    // If Javadoc is generated, this must be specified in that task too.
-    it.options.encoding = "UTF-8"
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        it.options.release = targetJavaVersion
-    }
+	it.options.release = 21
 }
-
 java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-    archivesBaseName = project.archives_base_name
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
-    withSourcesJar()
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
-    from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}" }
-    }
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}"}
+	}
 }
 
 runClient.doFirst {
@@ -89,10 +87,12 @@ runClient.doFirst {
 }
 
 // configure the maven publication
+// configure the maven publication
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
 }

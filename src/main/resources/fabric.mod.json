@@ -25,9 +25,9 @@
     "morecullingextra.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.20",
-    "minecraft": ">=1.20.4",
-    "moreculling": ">=0.20.3"
+    "fabricloader": ">=0.16.10",
+    "minecraft": ">=1.21",
+    "moreculling": ">=1.0.0"
   },
   "recommends": {
     "carpet-fixes": "*",
