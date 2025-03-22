@@ -5,14 +5,17 @@
   "package": "ca.fxco.morecullingextra.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "HalfTransparentBlock_beaconMixin",
+    "BakedModel_apiMixin",
     "BeaconBlock_glassMixin",
-    "IronBarsBlock_glassMixin"
+    "BlockModel_Mixin",
+    "BlockState_Mixin",
+    "CullingUtilsMixin",
+    "Deserializer_cullFaceMixin",
+    "HalfTransparentBlock_beaconMixin",
+    "IronBarsBlock_glassMixin",
+    "SimpleBakedModel_Mixin"
   ],
   "injectors": {
     "defaultRequire": 1
   }
-
-
-  
 }
